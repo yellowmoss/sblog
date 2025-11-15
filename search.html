@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Keyword Search"
+---
+
+{% include search.html %}
+
+{% assign q = page.keyword | default: site.params.keyword | default: site.keyword | default: '' %}
+{% assign q = q | downcase %}
+
+{% if q == '' %}
+  <p>Enter a keyword to search.</p>
+{% else %}
+
+  <h2>Search results for "{{ q }}"</h2>
+
+  {% assign matches = "" | split: "," %}
+
+  {% for post in site.posts %}
+    {% for kw in post.keywords %}
+      {% if kw | downcase == q %}
+        {% assign matches = matches | push: post %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if matches.size > 0 %}
+    <ul>
+      {% for p in matches %}
+        <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No blogs found.</p>
+  {% endif %}
+
+{% endif %}
