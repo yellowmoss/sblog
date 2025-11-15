@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
 </head>
 <body>
   <header>
@@ -13,8 +13,9 @@
     {% if site.description %}
       <p>{{ site.description }}</p>
     {% endif %}
-    <a href="/search.html">search</a>
-    <a href="{{ site.url }}/search.html">search2</a>
+    <a href="{{ site.baseurl | relative_url }}/search.html">search.filter.relative</a>
+    <a href="{{ site.baseurl | absolute_url }}/search.html">search.filter.absolute</a>
+    <a href="{{ site.baseurl }}/search.html">search.nofilter</a>
   </header>
   <main>
     {{ content }}
