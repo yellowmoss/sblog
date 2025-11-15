@@ -1,8 +1,8 @@
 title: My Simple Weird Blog
 description: Search blog structure from which to expand and customise 
 markdown: kramdown
-baseurl: "/sblog"
-url: "https://yellowmoss.github.io/"
+baseurl: ""
+url: "https://yellowmoss.github.io/sblog"
 permalink: "/:year/:month/:day/:title"
 collections:
   posts:
