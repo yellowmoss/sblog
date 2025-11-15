@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
+  <link rel="stylesheet" href="{{ site.baseurl | absolute_url  }}/assets/css/style.css">
 </head>
 <body>
   <header>
     <h1>
-      <a href="{{ site.baseurl }}">{{ site.title }}</a>
+      <a href="{{ site.baseurl | absolute_url }}">{{ site.title }}</a>
     </h1>
     {% if site.description %}
       <p>{{ site.description }}</p>
     {% endif %}
-    <a href="{{ site.baseurl | relative_url }}/search.html">search.filter.relative</a>
     <a href="{{ site.baseurl | absolute_url }}/search.html">search.filter.absolute</a>
-    <a href="{{ site.baseurl }}/search.html">search.nofilter</a>
   </header>
   <main>
     {{ content }}
