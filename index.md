@@ -8,5 +8,5 @@ Here are my posts:
 <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
 {% endfor %}
 
-<pre id="search-debug-output" style="background:#eee; padding:1em;"></pre>
-<script src="{{ '/assets/javascript/script.js' | relative_url }}"></script>
+<div id="search-output" style="background:#eee; padding:1em;"></div>
+<script src="{{ site.baseurl | absolute_url  }}/assets/javascript/script.js"></script>
