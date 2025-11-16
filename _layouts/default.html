@@ -13,6 +13,10 @@
     <h1><a href="{{ site.url | absolute_url }}">{{ site.title }}</a></h1>
     <h1><a href="{{ site.url | relative_url }}">{{ site.title }}</a></h1>
     <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url }}/{{ site.baseurl }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url }}/{{ site.baseurl | relative_url }}">{{ site.title }}</a></h1>
+    <h1><a href="{{ site.url }}/{{ site.baseurl | absolute_url }}">{{ site.title }}</a></h1>
     {% if site.description %}
       <p>{{ site.description }}</p>
     {% endif %}

@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
    const out = document.getElementById("search-output");
    if (out) {
+      out.textContent += "hello worlllld"
+
       out.textContent += "{{ '/search.json' | relative_url }}"
       out.textContent += "{{ '/search.json' | absolute_url }}"
       out.textContent += "{{ '/search.json' }}"
