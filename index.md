@@ -9,4 +9,6 @@ Here are my posts:
 {% endfor %}
 
 <div id="search-output" style="background:#eee; padding:1em;"></div>
-<script src="{{ site.baseurl | absolute_url  }}/assets/javascript/script.js"></script>
+<script src="{{ site.url }}/{{ site.baseurl }}/assets/javascript/script.js"
+  
+
