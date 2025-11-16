@@ -2,19 +2,27 @@ document.addEventListener("DOMContentLoaded", function () {
    const out = document.getElementById("search-output");
    if (out) {
       out.textContent = "hello world";
-   
-
-      fetch("{{ '/search.json' | relative_url }}")
-
-
-      .then(response => response.json())
-      .then(data => {
-         console.log("Search JSON loaded:", data);
-
-         out.textContent = JSON.stringify(data, null, 2);
+      //fetch("{{ '/search.json' | relative_url }}")
+      fetch('{{ "/search.txt" | relative_url }}')
+      .then(response => {
+         if (!response.ok) throw new Error('Network response was not ok');
+         return response.text();
+      })
+      .then(text => {
+         console.log('File loaded:', text);
+         document.getElementById('search-output').textContent = text;
       })
       .catch(err => {
-         console.error("Error loading search.json:", err);
+         console.error('Error fetching file:', err);
+         document.getElementById('search-output').textContent = 'Failed to load file';
       });
+      //.then(response => response.json())
+      //.then(data => {
+      //   console.log("Search JSON loaded:", data);
+      //   out.textContent = JSON.stringify(data, null, 2);
+      //})
+      //.catch(err => {
+      //   console.error("Error loading search.json:", err);
+      //});
    }
 });
