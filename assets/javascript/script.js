@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             console.log("Search JSON loaded:", data);
 
-            const output = document.getElementById("search-debug-output");
+            const output = document.getElementById("search-output");
             if (output) {
                 output.textContent = JSON.stringify(data, null, 2);
             }
