@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
    if (out) {
       out.textContent = "hello world";
    
-      fetch("{{ site.baseurl | absolute_url }}/search.json")
+
+      fetch("{{ '/search.json' | relative_url }}")
+
 
       .then(response => response.json())
       .then(data => {
