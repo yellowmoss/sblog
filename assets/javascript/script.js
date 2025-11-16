@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
    if (out) {
       out.textContent = "hello world";
       //fetch("{{ '/search.json' | relative_url }}")
-      fetch('{{ "/search.txt" | relative_url }}')
+      //fetch('{{ "/search.txt" | relative_url }}')
+      fetch("/search.txt")
       .then(response => {
          if (!response.ok) throw new Error('Network response was not ok');
          return response.text();
