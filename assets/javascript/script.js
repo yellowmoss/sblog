@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //out.textContent += {{ site.url | absolute_url }}/search.json
       //out.textContent += {{ site.url }}/search.json
       //fetch('{{ "/search.txt" | relative_url }}')
-      fetch("/search.txt")
+      fetch("https://yellowmoss.github.io/sblog/search.txt")
       .then(response => {
          if (!response.ok) throw new Error('Network response was not ok');
          return response.text();
