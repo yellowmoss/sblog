@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{
+  "tags": {
+    {% assign tag_names = site.tags | sort %}
+    {% for tag in tag_names %}
+      "{{ tag[0] }}": [
+        {% assign posts_sorted = tag[1] | sort: "date" | reverse %}
+        {% for post in posts_sorted %}
+        {
+          "title": {{ post.title | jsonify }},
+          "date": "{{ post.date | date_to_string }}",
+          "url": "{{ post.url | relative_url }}"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  }
+}
