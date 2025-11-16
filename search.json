@@ -1,14 +1,38 @@
 {
-  "tags": {
-    "jekyll": [
-      { "title": "My Post", "date": "16 Nov 2025", "url": "/jekyll/post1" },
-      { "title": "My Post2", "date": "17 Nov 2025", "url": "/jekyll/post2" },
-      { "title": "My Post3", "date": "18 Nov 2025", "url": "/jekyll/post3" },
-    ],
-    "hyde": [
-      { "title": "My PostA", "date": "16 Dec 2025", "url": "/jekyll/Apost1" },
-      { "title": "My PostA2", "date": "17 Dec 2025", "url": "/jekyll/Apost2" },
-      { "title": "My PostA3", "date": "18 Dec 2025", "url": "/jekyll/Apost3" },
-    ]
-  }
+    "tags": {
+        "jekyll": [
+            {
+                "title": "My Post",
+                "date": "16 Nov 2025",
+                "url": "/jekyll/post1"
+            },
+            {
+                "title": "My Post2",
+                "date": "17 Nov 2025",
+                "url": "/jekyll/post2"
+            },
+            {
+                "title": "My Post3",
+                "date": "18 Nov 2025",
+                "url": "/jekyll/post3"
+            }
+        ],
+        "hyde": [
+            {
+                "title": "My PostA",
+                "date": "16 Dec 2025",
+                "url": "/jekyll/Apost1"
+            },
+            {
+                "title": "My PostA2",
+                "date": "17 Dec 2025",
+                "url": "/jekyll/Apost2"
+            },
+            {
+                "title": "My PostA3",
+                "date": "18 Dec 2025",
+                "url": "/jekyll/Apost3"
+            }
+        ]
+    }
 }
