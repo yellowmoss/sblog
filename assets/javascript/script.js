@@ -2,18 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
    const out = document.getElementById("search-output");
    if (out) {
       out.textContent += "hello worlllld"
+      out.textContent += "/n"
+      out.textContent += "\n"
 
-      out.textContent += "{{ '/search.json' | relative_url }}"
-      out.textContent += "{{ '/search.json' | absolute_url }}"
-      out.textContent += "{{ '/search.json' }}"
+      out.textContent += {{ '/search.json' | relative_url }}
+      out.textContent += {{ '/search.json' | absolute_url }}
+      out.textContent += {{ '/search.json' }}
 
-      out.textContent += "{{ site.baseurl | relative_url }}/search.json"
-      out.textContent += "{{ site.baseurl | absolute_url }}/search.json"
-      out.textContent += "{{ site.baseurl }}/search.json"
+      out.textContent += {{ site.baseurl | relative_url }}/search.json
+      out.textContent += {{ site.baseurl | absolute_url }}/search.json
+      out.textContent += {{ site.baseurl }}/search.json
 
-      out.textContent += "{{ site.url | relative_url }}/search.json"
-      out.textContent += "{{ site.url | absolute_url }}/search.json"
-      out.textContent += "{{ site.url }}/search.json"
+      out.textContent += {{ site.url | relative_url }}/search.json
+      out.textContent += {{ site.url | absolute_url }}/search.json
+      out.textContent += {{ site.url }}/search.json
 
 
       //fetch('{{ "/search.txt" | relative_url }}')
