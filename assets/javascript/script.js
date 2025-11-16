@@ -1,21 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
    const out = document.getElementById("search-output");
    if (out) {
-      //out.textContent += "hello worlllld"
-      //out.textContent += "/n"
-      //out.textContent += "\n"
-
-      //out.textContent += {{ '/search.json' | relative_url }}
-      //out.textContent += {{ '/search.json' | absolute_url }}
-      //out.textContent += {{ '/search.json' }}
-      //out.textContent += {{ site.baseurl | relative_url }}/search.json
-      //out.textContent += {{ site.baseurl | absolute_url }}/search.json
-      //out.textContent += {{ site.baseurl }}/search.json
-      //out.textContent += {{ site.url | relative_url }}/search.json
-      //out.textContent += {{ site.url | absolute_url }}/search.json
-      //out.textContent += {{ site.url }}/search.json
-      //fetch('{{ "/search.txt" | relative_url }}')
-      fetch("https://yellowmoss.github.io/sblog/search.txt")
+      //fetch("https://yellowmoss.github.io/sblog/search.txt")
+      fetch("search.txt")
       .then(response => {
          if (!response.ok) throw new Error('Network response was not ok');
          return response.text();
